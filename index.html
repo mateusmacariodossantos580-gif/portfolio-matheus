@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Calculadora</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #111;
+      padding: 30px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 2px solid #444;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #151515;
+      border-radius: 12px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #00ffaa;
+    }
+
+    .calc-container {
+      width: 260px;
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px auto;
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      font-size: 22px;
+      text-align: right;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: #111;
+      color: #0f0;
+    }
+
+    .btn-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #00ffaa;
+      color: #000;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>Portfólio - Projeto Calculadora</header>
+
+  <section>
+    <h2>Sobre o Projeto</h2>
+    <p>Este projeto é uma calculadora funcional desenvolvida utilizando <strong>HTML, CSS e JavaScript</strong>. O objetivo foi criar um layout limpo, estiloso e totalmente responsivo, além de treinar lógica de programação manipulando operações matemáticas básicas.</p>
+  </section>
+
+  <section>
+    <h2>Preview da Calculadora</h2>
+
+    <div class="calc-container">
+      <input type="text" id="display" disabled />
+
+      <div class="btn-grid">
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button onclick="add('/')">/</button>
+
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button onclick="add('*')">*</button>
+
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button onclick="add('-')">-</button>
+
+        <button onclick="add('0')">0</button>
+        <button onclick="add('.')">.</button>
+        <button onclick="calc()">=</button>
+        <button onclick="add('+')">+</button>
+
+        <button onclick="clearDisplay()" style="grid-column: span 4; background:#aa0000;">LIMPAR</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Código Usado</h2>
+    <p>Aqui está a lógica JavaScript usada para fazer a calculadora funcionar:</p>
+
+<pre><code>// Adiciona caracteres ao visor
+function add(value) {
+  document.getElementById('display').value += value;
+}
+
+// Limpa o visor
+function clearDisplay() {
+  document.getElementById('display').value = '';
+}
+
+// Calcula
+function calc() {
+  try {
+    let result = eval(document.getElementById('display').value);
+    document.getElementById('display').value = result;
+  } catch {
+    document.getElementById('display').value = 'Erro';
+  }
+}
+</code></pre>
+  </section>
+
+  <footer>Projeto desenvolvido por Matheus • 2026</footer>
+
+  <script>
+    function add(value) {
+      document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+    function calc() {
+      try {
+        let result = eval(document.getElementById('display').value);
+        document.getElementById('display').value = result;
+      } catch {
+        document.getElementById('display').value = 'Erro';
+      }
+    }
+  </script>
+</body>
+</html>
