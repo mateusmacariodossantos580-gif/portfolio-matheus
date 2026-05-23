@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+a {
+    color: inherit;
+}
+
+.welcome-top {
+    padding: 32px 24px 0;
+}
+
+.school-strip {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 4px;
+}
+
+.school-logo {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.welcome-page,
+.page-center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.welcome-content,
+.form-box {
+    width: min(100%, 430px);
+}
+
+.school-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.school-title-group {
+    min-width: 0;
+}
+
+.school-label,
+.section-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #355c7d;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+
+.welcome-content h1,
+.form-box h1 {
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.school-title-group h1 {
+    white-space: nowrap;
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #1f2a37;
+}
+
+.page-text {
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: #4b5563;
+}
+
+.welcome-card,
+.form-box {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #d7deea;
+}
+
+.welcome-card {
+    width: min(100%, 520px);
+    margin-top: -120px;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(31, 41, 55, 0.06);
+}
+
+.register-box {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: 700;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.primary-button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #355c7d;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.welcome-card .primary-button {
+    margin-top: 0;
+}
+
+.switch-link {
+    margin-top: 18px;
+    color: #4b5563;
+}
+
+.switch-link a {
+    color: #355c7d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .welcome-content h1,
+    .form-box h1 {
+        font-size: 1.7rem;
+    }
+
+    .welcome-top {
+        padding: 24px 18px 0;
+    }
+
+    .school-strip {
+        align-items: flex-start;
+    }
+
+    .school-title-group h1 {
+        white-space: normal;
+        font-size: 1.7rem;
+    }
+
+    .welcome-card {
+        margin-top: -80px;
+    }
+
+    .form-box {
+        padding: 22px;
+    }
+}

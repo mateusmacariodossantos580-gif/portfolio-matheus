@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="page-center">
+        <section class="form-box register-box">
+            <p class="section-label">Novo cadastro</p>
+            <h1>Criar conta</h1>
+            <form>
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo" required>
+
+                <label for="cadastro-email">E-mail</label>
+                <input id="cadastro-email" name="email" type="email" placeholder="Digite seu e-mail" required>
+
+                <label for="cadastro-senha">Criar senha</label>
+                <input id="cadastro-senha" name="senha" type="password" placeholder="Crie uma senha" required>
+
+                <label for="confirmar-senha">Confirmar senha</label>
+                <input id="confirmar-senha" name="confirmar-senha" type="password" placeholder="Confirme a senha" required>
+
+                <button type="submit" class="primary-button">Cadastrar</button>
+            </form>
+
+            <p class="switch-link">
+                Já possui conta?
+                <a href="login.html" data-replace="login">Voltar para login</a>
+            </p>
+        </section>
+    </main>
+
+    <script>
+        const loginLink = document.querySelector('[data-replace="login"]');
+
+        loginLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.replace('login.html');
+        });
+    </script>
+</body>
+</html>
